@@ -50,7 +50,7 @@ fi
 
 # This function uses the logic from supports-hyperlinks[1][2], which is
 # made by Kat Marchán (@zkat) and licensed under the Apache License 2.0.
-# [1] https://github.com/zkat/supports-hyperlinks
+# [1] https://github.disable.app/zkat/supports-hyperlinks
 # [2] https://crates.io/crates/supports-hyperlinks
 #
 # Copyright (c) 2021 Kat Marchán
@@ -103,7 +103,7 @@ supports_hyperlinks() {
   fi
 
   # Konsole supports hyperlinks, but it's an opt-in setting that can't be detected
-  # https://github.com/ohmyzsh/ohmyzsh/issues/10964
+  # https://github.disable.app/ohmyzsh/ohmyzsh/issues/10964
   # if [ -n "$KONSOLE_VERSION" ]; then
   #   return 0
   # fi
@@ -112,7 +112,7 @@ supports_hyperlinks() {
 }
 
 # Adapted from code and information by Anton Kochkov (@XVilka)
-# Source: https://gist.github.com/XVilka/8346728
+# Source: https://gist.github.disable.app/XVilka/8346728
 supports_truecolor() {
   case "$COLORTERM" in
   truecolor|24bit) return 0 ;;
@@ -183,15 +183,15 @@ fi
 # Update upstream remote to ohmyzsh org
 git remote -v | while read remote url extra; do
   case "$url" in
-  git://github.com/robbyrussell/oh-my-zsh(|.git))
+  git://github.disable.app/robbyrussell/oh-my-zsh(|.git))
     # Update out-of-date "unauthenticated git protocol on port 9418" to https
-    git remote set-url "$remote" "https://github.com/ohmyzsh/ohmyzsh.git" ;;
-  https://github.com/robbyrussell/oh-my-zsh(|.git))
-    git remote set-url "$remote" "https://github.com/ohmyzsh/ohmyzsh.git" ;;
-  git@github.com:robbyrussell/oh-my-zsh(|.git))
-    git remote set-url "$remote" "git@github.com:ohmyzsh/ohmyzsh.git" ;;
-  https://github.com/ohmyzsh/ohmyzsh(|.git)) ;;
-  git@github.com:ohmyzsh/ohmyzsh(|.git)) ;;
+    git remote set-url "$remote" "https://github.disable.app/ohmyzsh/ohmyzsh.git" ;;
+  https://github.disable.app/robbyrussell/oh-my-zsh(|.git))
+    git remote set-url "$remote" "https://github.disable.app/ohmyzsh/ohmyzsh.git" ;;
+  git@github.disable.app:robbyrussell/oh-my-zsh(|.git))
+    git remote set-url "$remote" "git@github.disable.app:ohmyzsh/ohmyzsh.git" ;;
+  https://github.disable.app/ohmyzsh/ohmyzsh(|.git)) ;;
+  git@github.disable.app:ohmyzsh/ohmyzsh(|.git)) ;;
   *) continue ;;
   esac
 
