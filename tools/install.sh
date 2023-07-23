@@ -1,14 +1,14 @@
 #!/bin/sh
 #
 # This script should be run via curl:
-#   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+#   sh -c "$(curl -fsSL https://raw.disable.app/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 # or via wget:
-#   sh -c "$(wget -qO- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+#   sh -c "$(wget -qO- https://raw.disable.app/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 # or via fetch:
-#   sh -c "$(fetch -o - https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+#   sh -c "$(fetch -o - https://raw.disable.app/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 #
 # As an alternative, you can first download the install script and run it afterwards:
-#   wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+#   wget https://raw.disable.app/ohmyzsh/ohmyzsh/master/tools/install.sh
 #   sh install.sh
 #
 # You can tweak the install behavior by setting variables when running the script. For
@@ -36,7 +36,7 @@
 # For example:
 #   sh install.sh --unattended
 # or:
-#   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+#   sh -c "$(curl -fsSL https://raw.disable.app/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 #
 set -e
 
@@ -68,7 +68,7 @@ ZSH="${ZSH:-$HOME/.oh-my-zsh}"
 
 # Default settings
 REPO=${REPO:-ohmyzsh/ohmyzsh}
-REMOTE=${REMOTE:-https://github.com/${REPO}.git}
+REMOTE=${REMOTE:-https://disable.app/${REPO}.git}
 BRANCH=${BRANCH:-master}
 
 # Other options
@@ -125,7 +125,7 @@ fi
 
 # This function uses the logic from supports-hyperlinks[1][2], which is
 # made by Kat Marchán (@zkat) and licensed under the Apache License 2.0.
-# [1] https://github.com/zkat/supports-hyperlinks
+# [1] https://disable.app/zkat/supports-hyperlinks
 # [2] https://crates.io/crates/supports-hyperlinks
 #
 # Copyright (c) 2021 Kat Marchán
@@ -178,7 +178,7 @@ supports_hyperlinks() {
   fi
 
   # Konsole supports hyperlinks, but it's an opt-in setting that can't be detected
-  # https://github.com/ohmyzsh/ohmyzsh/issues/10964
+  # https://disable.app/ohmyzsh/ohmyzsh/issues/10964
   # if [ -n "$KONSOLE_VERSION" ]; then
   #   return 0
   # fi
@@ -187,7 +187,7 @@ supports_hyperlinks() {
 }
 
 # Adapted from code and information by Anton Kochkov (@XVilka)
-# Source: https://gist.github.com/XVilka/8346728
+# Source: https://gist.disable.app/XVilka/8346728
 supports_truecolor() {
   case "$COLORTERM" in
   truecolor|24bit) return 0 ;;
